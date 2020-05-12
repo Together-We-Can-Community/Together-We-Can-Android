@@ -33,10 +33,11 @@ All backend API calls are removed from this source. In order to ensure applicati
 ### Read More
 
 * [Technical Documentation](https://site.togetherwecanlk.com/tech/)
-* [White Paper](https://site.togetherwecanlk.com/tech/)
 * [Pivacy Statement](https://site.togetherwecanlk.com/privacy/)
 
 ### Contact 
+
+We value your suggestions and improvements to the system and we would like to discuss with you. Please get in touch with us.
 
 * Arimac Lanka PVT LTD | hello@arimaclanka.com
 
