@@ -30,6 +30,16 @@ The application will reach its highest benefit when the entire society uses the 
 Things to notice,
 All backend API calls are removed from this source. In order to ensure application flow works without an issue, Api calls (Indicated by  `//API Call: comments`) are simulated using timed handlers.
 
+### Read More
+
+* [Technical Documentation](https://site.togetherwecanlk.com/tech/)
+* [White Paper](https://site.togetherwecanlk.com/tech/)
+* [Pivacy Statement](https://site.togetherwecanlk.com/privacy/)
+
+### Contact 
+
+* Arimac Lanka PVT LTD | hello@arimaclanka.com
+
 ### Changelog
 
 2020-05-12
