@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F4FC">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/task_force_logo_top"
+        android:src="@drawable/task_force_logo_top" />
+
+
+    <ImageView
+        android:id="@+id/ivProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnSetup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/indicator_1" />
+
+    <Button
+        android:id="@+id/btnSetup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/blue_button_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="@string/let_s_go" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ivProgress"
+        android:layout_below="@id/ivLogo"
+        android:layout_marginTop="26dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center_horizontal"
+                android:text="@string/turn_bluetooth_on"
+                android:textColor="#1F68A9"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="46dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/turn_bluetooth_on_msg"
+                android:textColor="@color/text_ash"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="26dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bluetooh_on" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

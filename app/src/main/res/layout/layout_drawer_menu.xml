@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F4FC"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onClick"
+        android:src="@drawable/menu_close" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btnMenuHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_home"
+            android:drawablePadding="16dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/home"
+            android:textColor="#1863A5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_possible_cases"
+            android:drawablePadding="16dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/report_possible_cases"
+            android:textColor="#1863A5"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnMenuAssistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_request_assistance"
+            android:drawablePadding="16dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/request_assistance"
+            android:textColor="#1863A5"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnMenuSelfCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_self_check"
+            android:drawablePadding="16dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/self_health_check"
+            android:textColor="#1863A5"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnMenuMedicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_request_medicine"
+            android:drawablePadding="16dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/request_medicine"
+            android:textColor="#1863A5"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnMenuGetAssistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_get_assistance"
+            android:drawablePadding="16dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/get_assistance"
+            android:textColor="#1863A5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnMenuFAQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_faq"
+            android:drawablePadding="16dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/faq"
+            android:textColor="#1863A5"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/btnMenuLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_language"
+                android:drawablePadding="16dp"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/language"
+                android:textColor="#1863A5"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:drawableEnd="@drawable/arrow_down_blue"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#1863A5"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="English" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/task_force_logo_top"
+        android:src="@drawable/we_can_task_force_logo_top" />
+
+</RelativeLayout>

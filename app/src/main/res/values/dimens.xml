@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="task_force_logo_top">16dp</dimen>
+    <dimen name="stats_text_size">28sp</dimen>
+    <dimen name="stats_gap">14dp</dimen>
+</resources>

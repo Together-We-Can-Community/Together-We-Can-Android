@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1863A5</color>
+    <color name="colorPrimaryDark">#1863A5</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="text_ash">#757575</color>
+    <color name="blue_stroke_button_bg">#1863A5</color>
+    <color name="text_blue">#1863A5</color>
+    <color name="green_text">#6FC11E</color>
+    <color name="orange_text">#FFA200</color>
+    <color name="red_text">#F57352</color>
+</resources>

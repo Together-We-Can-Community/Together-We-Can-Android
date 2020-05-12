@@ -1,0 +1,93 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4, 0.99.99]'
+    }
+}
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.covidappsl"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 101
+        versionName "1.0.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [onesignal_app_id: "YOUR_ONE_SIGNAL_ID", onesignal_google_project_number: "REMOTE"]
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.assemble.doLast {
+                    if (variant.getBuildType().isMinifyEnabled()) {
+                        logger.lifecycle("Mapping File: ${variant.mappingFile}")
+                        if (variant.mappingFile.exists()) {
+                            copy {
+                                from "${mappingFile}"
+                                into "${rootDir}/mappings"
+                                rename { String fileName ->
+                                    "mapping-${variant.name}-v${defaultConfig.versionName}_${defaultConfig.versionCode}-${new Date().format('yyyyMMddHHmmss')}.txt"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        staging {
+            dimension "default"
+            versionName = android.defaultConfig.versionName
+            buildConfigField "boolean", "PRODUCTION", "false"
+            buildConfigField "boolean", "SECURE", "true"
+            buildConfigField "String", "API_BASE", "\"https://yourdomain\""
+            buildConfigField "String", "API_PATH", "\"/api\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+repositories {
+    maven { url "https://mint.splunk.com/gradle/" }
+    maven { url "https://jitpack.io" }
+    maven { url 'https://maven.google.com' }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    implementation 'com.chaos.view:pinview:1.4.3'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.splunk.mint:mint:5.0.0'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+    implementation 'com.android.support:localbroadcastmanager:28.0.0'
+    implementation 'com.google.firebase:firebase-analytics:17.4.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.6'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation group: 'com.google.android.material', name: 'material', version: '1.0.0'
+    implementation 'no.nordicsemi.android.support.v18:scanner:1.4.2'
+    implementation 'com.scottyab:rootbeer-lib:0.0.7'
+    implementation 'com.onesignal:OneSignal:[3.13.0, 3.99.99]'
+    implementation 'com.google.firebase:firebase-config:19.1.4'
+}
